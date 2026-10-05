@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MoonStore AR</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        🌙 <span id="siteName">MoonStore AR</span>
+    </div>
+
+    <nav id="menu">
+        <a href="#planes">Planes</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+
+    <h1 id="heroTitle">
+        Compra tus Tokens
+    </h1>
+
+    <p id="heroSubtitle">
+        Elige el plan que mejor se adapte a ti…
+    </p>
+
+</section>
+
+
+<section id="planes" class="planes">
+
+    <h2>Planes disponibles</h2>
+
+    <div id="plansContainer"></div>
+
+</section>
+
+
+<!-- Modal bienvenida -->
+
+<div id="welcomeModal" class="modal">
+
+<div class="modal-content">
+
+<h2>
+🌙 Bienvenido
+</h2>
+
+<p>
+Compra tus tokens de forma rápida y segura.
+</p>
+
+<button onclick="closeWelcome()">
+Continuar
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- Pantalla del plan -->
+
+<div id="planScreen" class="plan-screen">
+
+<button onclick="closePlan()">
+← Volver
+</button>
+
+<h1 id="planName"></h1>
+
+<p id="planDescription"></p>
+
+
+<div class="discount">
+
+<input 
+id="discountCode"
+placeholder="Código de descuento">
+
+<button onclick="applyDiscount()">
+Aplicar
+</button>
+
+</div>
+
+
+<div id="daysContainer"></div>
+
+
+</div>
+
+
+
+
+<!-- WhatsApp -->
+
+<div class="whatsapp">
+
+<select id="whatsappSelect">
+
+<option value="529992042946">
+Starlyn
+</option>
+
+<option value="5491136214717">
+Miwa
+</option>
+
+</select>
+
+</div>
+
+
+
+
+<footer>
+
+<p id="copyright">
+© MoonStore AR
+</p>
+
+
+<div class="links">
+
+<a href="pages/privacidad.html">
+Política de Privacidad
+</a>
+
+<a href="pages/terminos.html">
+Términos
+</a>
+
+<a href="pages/cookies.html">
+Cookies
+</a>
+
+</div>
+
+
+<!-- Acceso oculto Owner -->
+
+<span 
+id="ownerAccess"
+onclick="ownerLogin()">
+🜲
+</span>
+
+
+</footer>
+
+
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+</html>
