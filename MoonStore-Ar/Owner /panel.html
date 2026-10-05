@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MoonStore AR - Panel Owner</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>
+🌙 MoonStore AR
+</h1>
+
+<p>
+Panel Owner
+</p>
+
+</header>
+
+
+
+
+<section class="owner-panel">
+
+
+<h2>
+General
+</h2>
+
+
+<label>
+Nombre del sitio
+</label>
+
+<input id="nombre">
+
+
+
+<label>
+Título principal
+</label>
+
+<input id="titulo">
+
+
+
+<label>
+Subtítulo
+</label>
+
+<input id="subtitulo">
+
+
+
+
+
+<h2>
+Conversor USD → ARS
+</h2>
+
+
+<label>
+Valor del dólar
+</label>
+
+
+<input 
+id="dolar"
+type="number">
+
+
+
+
+
+<h2>
+Footer
+</h2>
+
+
+<input id="footer">
+
+
+
+
+
+
+
+<h2>
+WhatsApp principal
+</h2>
+
+
+<select id="whatsapp">
+
+
+<option value="529992042946">
+Starlyn
+</option>
+
+
+<option value="5491136214717">
+Miwa
+</option>
+
+
+</select>
+
+
+
+
+
+
+
+<button onclick="guardar()">
+
+Guardar cambios
+
+</button>
+
+
+
+<button onclick="restaurar()">
+
+Restaurar valores
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+<script src="../js/config.js"></script>
+
+
+<script>
+
+
+let config =
+JSON.parse(
+localStorage.getItem("moonConfig")
+)
+||
+moonConfig;
+
+
+
+
+
+window.onload=function(){
+
+
+document.getElementById("nombre").value =
+config.nombre;
+
+
+document.getElementById("titulo").value =
+config.hero.titulo;
+
+
+document.getElementById("subtitulo").value =
+config.hero.subtitulo;
+
+
+document.getElementById("dolar").value =
+config.dolarARS;
+
+
+document.getElementById("footer").value =
+config.footer;
+
+
+
+}
+
+
+
+
+
+
+function guardar(){
+
+
+config.nombre =
+document.getElementById("nombre").value;
+
+
+
+config.hero.titulo =
+document.getElementById("titulo").value;
+
+
+
+config.hero.subtitulo =
+document.getElementById("subtitulo").value;
+
+
+
+config.dolarARS =
+Number(
+document.getElementById("dolar").value
+);
+
+
+
+config.footer =
+document.getElementById("footer").value;
+
+
+
+
+localStorage.setItem(
+"moonConfig",
+JSON.stringify(config)
+);
+
+
+
+alert(
+"Guardado correctamente"
+);
+
+
+
+}
+
+
+
+
+
+
+function restaurar(){
+
+
+localStorage.removeItem(
+"moonConfig"
+);
+
+
+
+location.reload();
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
