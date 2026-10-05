@@ -1,0 +1,343 @@
+/* MoonStore AR - Diseño principal */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background: #070b18;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10,15,35,0.9);
+    border-bottom: 1px solid #222;
+}
+
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background:
+    linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.7)
+    );
+}
+
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+
+.hero p {
+    color: #ccc;
+    font-size: 20px;
+}
+
+
+
+/* PLANES */
+
+.planes {
+    padding: 40px 20px;
+}
+
+
+.planes h2 {
+    text-align:center;
+    margin-bottom:30px;
+}
+
+
+#plansContainer {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+
+
+.card {
+
+    background:#11182c;
+    width:300px;
+    padding:25px;
+    border-radius:20px;
+
+    border:1px solid #27304d;
+
+    transition:.3s;
+
+}
+
+
+
+.card:hover {
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.card h3 {
+
+    font-size:25px;
+
+}
+
+
+
+.card button {
+
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#6c4cff;
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+/* MODAL BIENVENIDA */
+
+.modal {
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.7);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.modal-content {
+
+    background:#121a33;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+}
+
+
+
+/* PANTALLA PLAN */
+
+.plan-screen {
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:#070b18;
+
+    padding:30px;
+
+    overflow:auto;
+
+}
+
+
+
+.day-option {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    background:#11182c;
+
+    padding:18px;
+
+    margin:10px 0;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+}
+
+
+
+.day-option:hover {
+
+    background:#1c2850;
+
+}
+
+
+
+/* DESCUENTO */
+
+.discount {
+
+    margin:20px 0;
+
+}
+
+
+.discount input {
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:none;
+
+}
+
+
+
+.discount button {
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:none;
+
+}
+
+
+
+/* WHATSAPP */
+
+.whatsapp {
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+}
+
+
+
+.whatsapp select {
+
+    padding:12px;
+
+    border-radius:20px;
+
+}
+
+
+
+/* FOOTER */
+
+footer {
+
+    margin-top:50px;
+
+    padding:30px;
+
+    text-align:center;
+
+    background:#050812;
+
+}
+
+
+
+.links a {
+
+    color:#aaa;
+
+    margin:10px;
+
+    font-size:14px;
+
+}
+
+
+
+#ownerAccess {
+
+    opacity:.15;
+
+    cursor:pointer;
+
+    margin-left:10px;
+
+}
+
+
+
+/* CELULAR */
+
+@media(max-width:700px){
+
+
+header{
+
+    padding:20px;
+
+}
+
+
+.hero h1{
+
+    font-size:32px;
+
+}
+
+
+.card{
+
+    width:100%;
+
+}
+
+
+}
