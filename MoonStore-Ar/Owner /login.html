@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MoonStore AR - Owner</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="modal-content" style="margin:100px auto; max-width:400px;">
+
+
+<h1>
+🌙 Panel Owner
+</h1>
+
+
+<p>
+Acceso privado
+</p>
+
+
+
+<input 
+id="password"
+type="password"
+placeholder="Contraseña">
+
+
+<br><br>
+
+
+<button onclick="entrar()">
+Entrar
+</button>
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/config.js"></script>
+
+
+<script>
+
+
+function entrar(){
+
+
+let pass =
+document.getElementById("password").value;
+
+
+
+if(pass === moonConfig.ownerPassword){
+
+
+window.location.href="panel.html";
+
+
+}
+
+else{
+
+
+alert("Contraseña incorrecta");
+
+
+}
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
